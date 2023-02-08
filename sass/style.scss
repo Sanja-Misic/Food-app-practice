@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  }
+      
+  html {
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+      
+  body {
+    font-family: sans-serif;
+    font-size: 2rem;
+    width: 100%;
+    min-width: 120rem;
+    background-color: bisque;
+    margin: 0 auto;
+  }
+
+
+.header {
+  background-color: rgb(255, 250, 245);
+  text-align: center;
+  padding: 6rem;
+  text-transform: uppercase;
+  border-bottom: 1rem solid orangered;
+  
+
+  .heading{
+    margin-bottom: 3rem;
+  }
+
+  .input-ingredient {
+    display: inline-block;
+    padding: 1.5rem 6rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+   &::placeholder{   
+    color: orangered;
+    font-size: 1.8rem;
+   }
+  }
+
+  .check-button{
+    background-color: orangered;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 1.5rem 8rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border-radius: 2rem;
+
+    &:hover{
+      background-color: rgba(255, 68, 0, 0.786);
+    }
+  }
+}
+
+.found-meals-container {
+  padding: 4rem 0;
+  max-width: 120rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin: 0 auto;
+ 
+  .meal{
+    background-color: orangered;
+    border-radius: 3rem;
+    padding: 2rem 2rem 4rem 2rem;
+    text-align: center;
+    flex-basis: 0;
+
+    &-img{
+      width: 26rem;
+      margin-bottom: 2rem;
+    }
+
+    &-name{
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    &-button{
+      display: inline-block;
+      background-color: white;
+      font-weight: 600;
+      border: none;
+      padding: 1rem 1.5rem;
+      font-size: 1.6rem;
+      border-radius: 2rem;
+    }
+  }
+}
+
+.read-more-container {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(242, 242, 242, 0.787) ;
+  // filter: blur(4px)
+  display: none;
+}
