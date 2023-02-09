@@ -5,97 +5,176 @@
 }
 
 html {
-  font-size: 10px;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 2rem;
+  position: relative;
+  margin: 0 auto;
   width: 100%;
   min-width: 120rem;
-  background-color: bisque;
-  margin: 0 auto;
+  font-family: sans-serif;
+  font-size: 2rem;
+  background-color: #fff;
 }
 
 .header {
-  background-color: rgb(255, 250, 245);
-  text-align: center;
   padding: 6rem;
+  text-align: center;
   text-transform: uppercase;
-  border-bottom: 1rem solid orangered;
+  background-color: #272d2f;
+  border-bottom: 0.5rem solid #fa4a19;
 }
 .header .heading {
   margin-bottom: 3rem;
+  color: #fff;
 }
 .header .input-ingredient {
-  display: inline-block;
   padding: 1.5rem 6rem;
+  display: inline-block;
   font-size: 2rem;
   border-radius: 2rem;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .header .input-ingredient::-moz-placeholder {
-  color: orangered;
+  color: #fa4a19;
   font-size: 1.8rem;
 }
 .header .input-ingredient::placeholder {
-  color: orangered;
+  color: #fa4a19;
   font-size: 1.8rem;
 }
 .header .check-button {
-  background-color: orangered;
-  color: white;
-  font-weight: 600;
-  border: none;
   padding: 1.5rem 8rem;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 2rem;
+  color: #fff;
+  background-color: #fa4a19;
+  border: none;
   border-radius: 2rem;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .header .check-button:hover {
-  background-color: rgba(255, 68, 0, 0.786);
+  background-color: #fa4a19;
 }
 
 .found-meals-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  justify-content: center;
+  margin: 0 auto;
   padding: 4rem 0;
   max-width: 120rem;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  gap: 6rem;
-  margin: 0 auto;
 }
 .found-meals-container .meal {
-  background-color: orangered;
-  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 0;
   padding: 2rem 2rem 4rem 2rem;
   text-align: center;
-  flex-basis: 0;
+  background-color: #fa4a19;
+  border-radius: 3rem;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .found-meals-container .meal-img {
-  width: 26rem;
   margin-bottom: 2rem;
+  width: 26rem;
 }
 .found-meals-container .meal-name {
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
 .found-meals-container .meal-button {
+  align-self: center;
   display: inline-block;
-  background-color: white;
-  font-weight: 600;
-  border: none;
   padding: 1rem 1.5rem;
+  background-color: #fff;
+  font-weight: 600;
   font-size: 1.6rem;
+  border: none;
   border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 
 .read-more-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  display: grid;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(242, 242, 242, 0.787);
-  display: none;
+  background-color: rgba(59, 59, 59, 0.7882352941);
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
+  visibility: hidden;
+}
+
+.read-more-wrapper {
+  position: relative;
+  place-self: center;
+  padding: 6rem;
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+.read-more-wrapper .meal-recipe {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+.read-more-wrapper .meal-category {
+  display: inline-block;
+  margin-bottom: 4rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fa4a19;
+  border-radius: 1rem;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
+}
+.read-more-wrapper .meal-link {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.read-more-wrapper .meal-link-img {
+  width: 50rem;
+  aspect-ratio: 16/9;
+  border: 5px solid #fa4a19;
+  filter: brightness(90%);
+}
+.read-more-wrapper .meal-link-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.read-more-wrapper .close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.read-more-wrapper .close-button:hover {
+  color: rgb(70, 70, 70);
+}
+
+.body-on-read-more-button {
+  overflow-y: hidden;
+}
+
+.wrong-input {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 2.4rem;
+  visibility: visible;
+}
+.wrong-input-text {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */
