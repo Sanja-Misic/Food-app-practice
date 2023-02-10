@@ -53,7 +53,6 @@ const checkMeal = async function(ingredient) {
     }  
 }
 
-
 //Check button functionality
 checkButton.addEventListener('click', function() {
     foundMealsContainer.innerHTML = '';
@@ -74,7 +73,6 @@ checkButton.addEventListener('click', function() {
      }
     })
 
-
 //////////////////////////////////////
 //Fetch meal based on id
 const displeyMealById = async function(id) {
@@ -82,8 +80,7 @@ const displeyMealById = async function(id) {
     const data = await response.json();
     displayReadMore(data.meals[0]);
     }
-
-    
+  
 //Read more button functionality
 foundMealsContainer.addEventListener('click', function(event) {
     if (event.target.classList.contains('meal-button')) {
