@@ -49,21 +49,20 @@ const checkMeal = async function(ingredient) {
         foundMealsContainer.innerHTML = `<div class="wrong-input">
         <p class="wrong-input-text">You have entered an ingredient that does not exist 😟!</p>
         <p class="wrong-input-text">Try again!</p>
-    </div>`;
-       
+    </div>`;      
     }  
 }
 
 //Check button functionality
 checkButton.addEventListener('click', function() {
     foundMealsContainer.innerHTML = '';
+    mealIdArr = []
 
      if(inputedIngredient.value) {
          inerIngredients = inputedIngredient.value
-         checkMeal(inerIngredients)
-         
-       
+         checkMeal(inerIngredients)     
      } 
+
      else {
         foundMealsContainer.innerHTML = `<div class="wrong-input">
         <p class="wrong-input-text">You have not entered any ingredients!</p>
@@ -94,7 +93,7 @@ foundMealsContainer.addEventListener('click', function(event) {
   
         readMoreContainer.style.visibility = "visible";
         readMoreContainer.innerHTML = '';
-        body.classList.add("body-on-read-more-button");    
+        body.style.overflowY = "hidden";   
     }
 });
 
@@ -117,6 +116,6 @@ readMoreContainer.addEventListener('click', function(event) {
         event.stopPropagation()
         readMoreContainer.style.visibility = "hidden"
 
-        body.classList.remove("body-on-read-more-button");
+        body.style.overflowY = "visible";   
     }
 });

@@ -1,12 +1,19 @@
 //colors
 $color-main-orange: #fa4a19;
+$color-check-btn-hover:#fb5d31;
 $color-main-white: #fff;
 $color-shadow: #00000062;
+$color-shadow-hover: #00000051;
 $color-read-more-container: #3b3b3bc9;
 $color-header-dark: #272d2f;
+$color-read-more-hover:#f3f3f3;
+$color-close-hover:#464646;
 
 @mixin shadow {
   box-shadow: 0px 3px 10px 2px $color-shadow;
+}
+@mixin shadow-hover {
+  box-shadow: 0px 3px 20px  $color-shadow-hover;
 }
 
 
@@ -49,7 +56,7 @@ $color-header-dark: #272d2f;
     padding: 1.5rem 6rem;
     display: inline-block;
     font-size: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     @include shadow();
    
     &::placeholder{   
@@ -66,11 +73,14 @@ $color-header-dark: #272d2f;
     color: $color-main-white;
     background-color: $color-main-orange;
     border: none;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
     @include shadow();
 
     &:hover{
-      background-color: $color-main-orange;
+      background-color: $color-check-btn-hover;
+      transform: translateY(-3%);
+      @include shadow-hover();
     }
   }
 }
@@ -83,6 +93,7 @@ $color-header-dark: #272d2f;
   margin: 0 auto;
   padding: 4rem 0;
   max-width: 120rem;
+  
  
   .meal{
     display: flex;
@@ -92,7 +103,7 @@ $color-header-dark: #272d2f;
     padding: 2rem 2rem 4rem 2rem;
     text-align: center;
     background-color: $color-main-orange;
-    border-radius: 3rem;
+    border-radius: 1rem;
     @include shadow();
 
     &-img{
@@ -113,13 +124,20 @@ $color-header-dark: #272d2f;
       font-weight: 600;
       font-size: 1.6rem;
       border: none;
-      border-radius: 2rem;
+      border-radius: 1rem;
       cursor: pointer;
       @include shadow();
+
+      &:hover{
+        background-color: $color-read-more-hover;
+        transform: translateY(-3%);
+        @include shadow-hover();
+      }
     }
   }
 }
 
+//popup on read more
 .read-more-container {
   position: fixed;
   top:0;
@@ -131,10 +149,11 @@ $color-header-dark: #272d2f;
   @include shadow();
   
   visibility: hidden;
+  backdrop-filter: blur(4px);
 }
 
 .read-more-wrapper {
-  position: relative;
+  position: fixed;
   place-self: center;
   padding: 6rem;
   width: 70%;
@@ -145,9 +164,10 @@ $color-header-dark: #272d2f;
 
   .meal-recipe {
     margin-bottom: 4rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.7;
   }
+
   .meal-category {
     display: inline-block;
     margin-bottom: 4rem;
@@ -171,7 +191,6 @@ $color-header-dark: #272d2f;
       border: 5px solid $color-main-orange;
       // filter: blur(4px)
       filter: brightness(90%);
-     
     }
 
     &-play-button{
@@ -190,14 +209,10 @@ $color-header-dark: #272d2f;
 
 
     &:hover{
-      color: rgb(70, 70, 70);
+      color: $color-close-hover;
+      transform: translateY(-3%);
     }
   }
-}
-
-.body-on-read-more-button {   
-   overflow-y: hidden;
-  //  filter: blur(4px);
 }
 
 .wrong-input{

@@ -34,7 +34,7 @@ body {
   padding: 1.5rem 6rem;
   display: inline-block;
   font-size: 2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .header .input-ingredient::-moz-placeholder {
@@ -53,11 +53,14 @@ body {
   color: #fff;
   background-color: #fa4a19;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .header .check-button:hover {
-  background-color: #fa4a19;
+  background-color: #fb5d31;
+  transform: translateY(-3%);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3176470588);
 }
 
 .found-meals-container {
@@ -77,7 +80,7 @@ body {
   padding: 2rem 2rem 4rem 2rem;
   text-align: center;
   background-color: #fa4a19;
-  border-radius: 3rem;
+  border-radius: 1rem;
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
 }
 .found-meals-container .meal-img {
@@ -96,9 +99,14 @@ body {
   font-weight: 600;
   font-size: 1.6rem;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   cursor: pointer;
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
+}
+.found-meals-container .meal-button:hover {
+  background-color: #f3f3f3;
+  transform: translateY(-3%);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.3176470588);
 }
 
 .read-more-container {
@@ -111,10 +119,12 @@ body {
   background-color: rgba(59, 59, 59, 0.7882352941);
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.3843137255);
   visibility: hidden;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .read-more-wrapper {
-  position: relative;
+  position: fixed;
   place-self: center;
   padding: 6rem;
   width: 70%;
@@ -124,7 +134,7 @@ body {
 }
 .read-more-wrapper .meal-recipe {
   margin-bottom: 4rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.7;
 }
 .read-more-wrapper .meal-category {
@@ -162,11 +172,8 @@ body {
   cursor: pointer;
 }
 .read-more-wrapper .close-button:hover {
-  color: rgb(70, 70, 70);
-}
-
-.body-on-read-more-button {
-  overflow-y: hidden;
+  color: #464646;
+  transform: translateY(-3%);
 }
 
 .wrong-input {
