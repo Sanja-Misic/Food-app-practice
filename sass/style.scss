@@ -9,6 +9,7 @@ $color-header-dark: #272d2f;
 $color-read-more-hover:#f3f3f3;
 $color-close-hover:#464646;
 
+//mixins
 @mixin shadow {
   box-shadow: 0px 3px 10px 2px $color-shadow;
 }
@@ -16,7 +17,20 @@ $color-close-hover:#464646;
   box-shadow: 0px 3px 20px  $color-shadow-hover;
 }
 
+//animation
+@keyframes meal-car-animation {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+//general
 * {
   padding: 0;
   margin: 0;
@@ -38,14 +52,13 @@ $color-close-hover:#464646;
     background-color: $color-main-white;
   }
 
-
+/////////////////////
 .header {
   padding: 6rem;
   text-align: center;
   text-transform: uppercase;
   background-color: $color-header-dark;
   border-bottom: 0.5rem solid $color-main-orange;
-  
 
   .heading{
     margin-bottom: 3rem;
@@ -93,8 +106,7 @@ $color-close-hover:#464646;
   margin: 0 auto;
   padding: 4rem 0;
   max-width: 120rem;
-  
- 
+
   .meal{
     display: flex;
     flex-direction: column;
@@ -105,6 +117,7 @@ $color-close-hover:#464646;
     background-color: $color-main-orange;
     border-radius: 1rem;
     @include shadow();
+    animation: meal-car-animation 1s;
 
     &-img{
       margin-bottom: 2rem;
@@ -189,7 +202,6 @@ $color-close-hover:#464646;
       aspect-ratio: 16 / 9;
 
       border: 5px solid $color-main-orange;
-      // filter: blur(4px)
       filter: brightness(90%);
     }
 
@@ -206,7 +218,6 @@ $color-close-hover:#464646;
     right: 2rem;
     font-size: 3rem;
     cursor: pointer;
-
 
     &:hover{
       color: $color-close-hover;

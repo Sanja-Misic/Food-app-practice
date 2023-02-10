@@ -53,6 +53,7 @@ const checkMeal = async function(ingredient) {
     }  
 }
 
+
 //Check button functionality
 checkButton.addEventListener('click', function() {
     foundMealsContainer.innerHTML = '';
